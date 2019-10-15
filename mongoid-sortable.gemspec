@@ -3,7 +3,7 @@ require File.expand_path('../lib/mongoid-sortable/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Elliott Pogue"]
-  gem.email         = ["jpstokes@gmail.com"]
+  gem.email         = ["github@tnypxl.com"]
   # gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{A Mongoid 7.0 module for sorting}
   gem.homepage      = "https://github.com/epogue/mongoid-sortable"
