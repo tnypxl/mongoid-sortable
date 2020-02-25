@@ -1,4 +1,6 @@
-$:.unshift(File.dirname(__FILE__) + '/../lib')
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib')
 plugin_test_dir = File.dirname(__FILE__)
 
 require 'rubygems'
@@ -13,10 +15,10 @@ require 'mongoid'
 
 require 'byebug'
 
-Dir["./spec/support/**/*.rb"].each {|f| require f}
+Dir['./spec/support/**/*.rb'].sort.each { |f| require f }
 
-ENV["MONGOID_ENV"] = "test"
-Mongoid.load!(plugin_test_dir + "/db/mongoid.yml")
+ENV['MONGOID_ENV'] = 'test'
+Mongoid.load!(plugin_test_dir + '/db/mongoid.yml')
 
 RSpec.configure do |config|
   config.expect_with(:rspec) { |c| c.syntax = :should }
